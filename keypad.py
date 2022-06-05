@@ -37,20 +37,22 @@ GPIO.setup(C4, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 # to the detected column
 
 def readLine(line, characters):
+    char = ""
     GPIO.output(line, GPIO.HIGH)
     if(GPIO.input(C1) == 1):
         #print(characters[0])
-        return characters[0]
-    elif(GPIO.input(C2) == 1):
+        char = characters[0]
+    if(GPIO.input(C2) == 1):
         #print(characters[1])
-        return characters[1]
-    elif(GPIO.input(C3) == 1):
+        char = characters[1]
+    if(GPIO.input(C3) == 1):
         #print(characters[2])
-        return characters[2]
-    elif(GPIO.input(C4) == 1):
+        char = characters[2]
+    if(GPIO.input(C4) == 1):
         #print(characters[3])
-        return characters[3]
+        char = characters[3]
     GPIO.output(line, GPIO.LOW)
+    return char
     
 
 while True:
@@ -67,6 +69,7 @@ while True:
         return_value = readLine(L4, ["*","0","#","D"])
         if return_value != None:
             print(return_value)
+
         time.sleep(0.2)
             
     except KeyboardInterrupt:
