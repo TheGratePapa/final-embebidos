@@ -54,27 +54,29 @@ def readLine(line, characters):
     GPIO.output(line, GPIO.LOW)
     return char
     
+def read_char:
 
-while True:
-    try:     
-        stored_char = ""
-        return_value = readLine(L1, ["1","2","3","A"])
-        if return_value != "":
-            stored_char = return_value
-        return_value = readLine(L2, ["4","5","6","B"])
-        if return_value != "":
-            stored_char = return_value
-        return_value = readLine(L3, ["7","8","9","C"])
-        if return_value != "":
-            stored_char = return_value
-        return_value = readLine(L4, ["*","0","#","D"])
-        if return_value != "":
-            stored_char = return_value
-        if stored_char != "":
-            print(stored_char)  
-        time.sleep(0.2)
+    while True:
+        try:     
+            stored_char = ""
+            return_value = readLine(L1, ["1","2","3","A"])
+            if return_value != "":
+                stored_char = return_value
+            return_value = readLine(L2, ["4","5","6","B"])
+            if return_value != "":
+                stored_char = return_value
+            return_value = readLine(L3, ["7","8","9","C"])
+            if return_value != "":
+                stored_char = return_value
+            return_value = readLine(L4, ["*","0","#","D"])
+            if return_value != "":
+                stored_char = return_value
+            if stored_char != "":
+                print(stored_char)  
+                return stored_char
+            time.sleep(0.2)
 
-            
-    except KeyboardInterrupt:
-        print("\nApplication stopped!")
+                
+        except KeyboardInterrupt:
+            print("\nApplication stopped!")
 
