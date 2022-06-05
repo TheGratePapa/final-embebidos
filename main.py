@@ -78,7 +78,7 @@ while number_verification:
                 pin = pin + trigger 
                 setText("Digite el pin\n >"+str(pin))
                 setRGB(0, 128, 15)
-
+            n+=1
     except KeyboardInterrupt:
         print("\nApplication stopped!")
     
