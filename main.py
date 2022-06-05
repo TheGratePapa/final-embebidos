@@ -9,14 +9,17 @@ setRGB(0, 128, 15)
 #variables
 trigger = "N"
 charge = ""
+pin = ""
 decimal_flag = 0
 
+#salir de modo standby
 try:
     while read_char() !="D":
         time.sleep(1)
 except KeyboardInterrupt:
     print("\nApplication stopped!")
 
+#ingresar monto
 setText("Digite el monto\n >")
 setRGB(0, 128, 15)
 
@@ -39,11 +42,6 @@ while number_verification:
                 setText("Digite el monto\n >"+str(charge))
                 setRGB(0, 128, 15)
 
-            
-
-            
-        
-
     except KeyboardInterrupt:
         print("\nApplication stopped!")
     
@@ -59,11 +57,42 @@ while number_verification:
 #read card
 setText("coloque tarjeta")
 setRGB(50, 50, 255)
-number_verification = True
 card = card_reader()
 print("tarjeta leida: "+ str(card)) 
 
 #password
 
-setText("Ingrese contraseña\n >")
+setText("Digite PIN\n >")
 setRGB(0, 128, 15)
+
+number_verification = True
+while number_verification:
+    try:
+       
+        while n<4:
+            trigger = read_char()
+            time.sleep(0.2)
+            print("pin: " + pin)
+            print("trigger: "+ trigger)
+            if trigger.isdigit():
+                pin = pin + trigger 
+                setText("Digite el pin\n >"+str(pin))
+                setRGB(0, 128, 15)
+
+    except KeyboardInterrupt:
+        print("\nApplication stopped!")
+    
+    number_verification = False
+    
+    try:
+        val = float(pin)
+    except value_error:
+        setText("Error numerico")
+        setRGB(200, 0, 0)
+        number_verification = True
+
+
+#Verificacion
+
+setText("Verificacion")
+setRGB(255, 255, 255)
