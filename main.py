@@ -37,7 +37,8 @@ while number_verification:
             trigger = readLine(L4, ["*","0","#","D"])
             time.sleep(0.4)
 
-        
+            print("trigger: "+ trigger)
+
             if trigger.isdigit():
                 charge = charge + trigger 
                 setText("Digite el monto\n >"+str(charge))
