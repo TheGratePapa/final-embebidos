@@ -14,7 +14,5 @@ def half_sec_beep():
         digitalWrite(buzzer_pin,0)
     except KeyboardInterrupt:
         digitalWrite(buzzer_pin,0)
-        break
-    except(IOError, TypeError) as e:
-        print("upsie hehe")
+    
 
