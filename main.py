@@ -57,7 +57,8 @@ while number_verification:
         number_verification = True
 
 #read card
-    setRGB(100, 100, 255)
+    setText("coloque tarjeta")
+    setRGB(50, 50, 255)
     number_verification = True
     card = card_reader()
     print("tarjeta leida: "+ str(card)) 
