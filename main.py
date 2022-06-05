@@ -11,7 +11,8 @@ charge = ""
 decimal_flag = 0
 
 try:
-    while read_char() !="D": 
+    while read_char() !="D":
+        pass 
 except KeyboardInterrupt:
     print("\nApplication stopped!")
 
