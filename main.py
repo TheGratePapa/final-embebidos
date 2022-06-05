@@ -1,5 +1,6 @@
 from keypad import *
 from grove_rgb_lcd import *
+from Read import *
 
 setText("Presione D para inicializar")
 setRGB(0, 128, 15)
@@ -54,3 +55,9 @@ while number_verification:
         setText("Error numerico")
         setRGB(200, 0, 0)
         number_verification = True
+
+#read card
+    setRGB(100, 100, 255)
+    number_verification = True
+    card = card_reader()
+    print("tarjeta leida: "+ str(card)) 
