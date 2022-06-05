@@ -68,7 +68,7 @@ setRGB(0, 128, 15)
 number_verification = True
 while number_verification:
     try:
-       
+        n=0
         while n<4:
             trigger = read_char()
             time.sleep(0.2)
