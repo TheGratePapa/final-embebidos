@@ -39,26 +39,34 @@ GPIO.setup(C4, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 def readLine(line, characters):
     GPIO.output(line, GPIO.HIGH)
     if(GPIO.input(C1) == 1):
-        print(characters[0])
+        #print(characters[0])
         return characters[0]
     if(GPIO.input(C2) == 1):
-        print(characters[1])
+        #print(characters[1])
         return characters[1]
     if(GPIO.input(C3) == 1):
-        print(characters[2])
+        #print(characters[2])
         return characters[2]
     if(GPIO.input(C4) == 1):
-        print(characters[3])
+        #print(characters[3])
         return characters[3]
     GPIO.output(line, GPIO.LOW)
     
 
 while True:
     try:     
-        readLine(L1, ["1","2","3","A"])
-        readLine(L2, ["4","5","6","B"])
-        readLine(L3, ["7","8","9","C"])
-        readLine(L4, ["*","0","#","D"])
+        return_value = readLine(L1, ["1","2","3","A"])
+        if return_value != None:
+            print(return_value)
+        return_value = readLine(L2, ["4","5","6","B"])
+        if return_value != None:
+            print(return_value)
+        return_value = readLine(L3, ["7","8","9","C"])
+        if return_value != None:
+            print(return_value)
+        return_value = readLine(L4, ["*","0","#","D"])
+        if return_value != None:
+            print(return_value)
         time.sleep(0.2)
             
     except KeyboardInterrupt:
