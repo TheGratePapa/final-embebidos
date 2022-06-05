@@ -54,7 +54,7 @@ def readLine(line, characters):
     GPIO.output(line, GPIO.LOW)
     return char
     
-def read_char:
+def read_char():
 
     while True:
         try:     

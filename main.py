@@ -11,7 +11,7 @@ charge = ""
 decimal_flag = 0
 
 try:
-    while read_char !="D":
+    while read_char() !="D":
         time.sleep(0.2)
 
 except KeyboardInterrupt:
@@ -23,7 +23,7 @@ setRGB(0, 128, 15)
 number_verification = True
 while number_verification:
     try:
-        while read_char != "A":
+        while read_char() != "A":
             # call the readLine function for each row of the keypad
         
             trigger = readLine(L1, ["1","2","3","A"])
