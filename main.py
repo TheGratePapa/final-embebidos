@@ -11,9 +11,7 @@ charge = ""
 decimal_flag = 0
 
 try:
-    while read_char() !="D":
-        time.sleep(0.2)
-
+    while read_char() !="D": 
 except KeyboardInterrupt:
     print("\nApplication stopped!")
 
@@ -23,10 +21,10 @@ setRGB(0, 128, 15)
 number_verification = True
 while number_verification:
     try:
-        while read_char() != "A":
-            time.sleep(0.3)
-
-            if read_char().isdigit():
+        trigger = read_char()
+        while trigger != "A":
+        
+            if trigger.isdigit():
                 charge = charge + trigger 
                 setText("Digite el monto\n >"+str(charge))
                 setRGB(0, 128, 15)
