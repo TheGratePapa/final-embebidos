@@ -60,7 +60,7 @@ setText("coloque tarjeta")
 setRGB(50, 50, 255)
 card = card_reader()
 print("tarjeta leida: "+ str(card)) 
-
+half_sec_beep()
 #password
 
 setText("Digite PIN\n >")
@@ -95,6 +95,6 @@ while number_verification:
 
 
 #Verificacion
-half_sec_beep()
+
 setText("Verificacion")
 setRGB(255, 255, 255)
