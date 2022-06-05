@@ -40,13 +40,15 @@ while number_verification:
         
             if trigger.isdigit():
                 charge = charge + trigger 
-            elif  trigger == "*" and decimal_flag !=1
+                setText("Digite el monto\n >"+str(charge))
+                setRGB(0, 128, 15)
+            elif  trigger == "*" and decimal_flag != 1:
                 charge = charge + "."
                 decimal_flag = 1
+                setText("Digite el monto\n >"+str(charge))
+                setRGB(0, 128, 15)
 
-
-            setText("Digite el monto\n >"+str(charge))
-            setRGB(0, 128, 15)
+            
 
             
         
@@ -58,7 +60,7 @@ while number_verification:
     
     try:
         val = float(charge)
-    except Value error:
+    except value_error:
         setText("Error numerico")
         setRGB(200, 0, 0)
         number_verification = True
