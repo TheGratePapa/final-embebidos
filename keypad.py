@@ -57,6 +57,7 @@ def readLine(line, characters):
 
 while True:
     try:     
+        stored_char = ""
         return_value = readLine(L1, ["1","2","3","A"])
         if return_value != "":
             stored_char = return_value
@@ -67,11 +68,10 @@ while True:
         if return_value != "":
             stored_char = return_value
         return_value = readLine(L4, ["*","0","#","D"])
-         if return_value != "":
+        if return_value != "":
             stored_char = return_value
         if stored_char != "":
-            print(stored_char)
-            stored_char = ""
+            print(stored_char)  
         time.sleep(0.2)
 
             
