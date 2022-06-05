@@ -29,7 +29,6 @@ def card_reader():
         # Print UID
         print("UID: "+str(uid[0])+","+str(uid[1])+","+str(uid[2])+","+str(uid[3]))
         return uid
-  
         time.sleep(2)
       time.sleep(2)
   

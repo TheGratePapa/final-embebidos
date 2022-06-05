@@ -57,13 +57,13 @@ while number_verification:
         number_verification = True
 
 #read card
-    setText("coloque tarjeta")
-    setRGB(50, 50, 255)
-    number_verification = True
-    card = card_reader()
-    print("tarjeta leida: "+ str(card)) 
+setText("coloque tarjeta")
+setRGB(50, 50, 255)
+number_verification = True
+card = card_reader()
+print("tarjeta leida: "+ str(card)) 
 
 #password
 
-    setText("Ingrese contraseña\n >")
-    setRGB(0, 128, 15)
+setText("Ingrese contraseña\n >")
+setRGB(0, 128, 15)
