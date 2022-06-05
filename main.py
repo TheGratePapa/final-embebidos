@@ -62,3 +62,8 @@ while number_verification:
     number_verification = True
     card = card_reader()
     print("tarjeta leida: "+ str(card)) 
+
+#password
+
+    setText("Ingrese contraseña\n >")
+    setRGB(0, 128, 15)
