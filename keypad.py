@@ -53,7 +53,7 @@ def readLine(line, characters):
     GPIO.output(line, GPIO.LOW)
     
 
-while true:
+while True:
     try:     
         readLine(L1, ["1","2","3","A"])
         readLine(L2, ["4","5","6","B"])
