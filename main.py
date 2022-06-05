@@ -24,9 +24,10 @@ while number_verification:
     try:
         trigger = read_char()
         time.sleep(0.1)
-        print("trigger"+ trigger)
+        print("trigger1: "+ trigger)
         while trigger != "A":
-            print("charge" + charge)
+            print("charge: " + charge)
+            print("trigger2: "+ trigger)
             if trigger.isdigit():
                 charge = charge + trigger 
                 setText("Digite el monto\n >"+str(charge))
