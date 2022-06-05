@@ -1,4 +1,4 @@
-import keypad
+from keypad import *
 from grove_rgb_lcd import *
 
 setText("Presione D para inicializar")
