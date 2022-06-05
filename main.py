@@ -24,17 +24,9 @@ number_verification = True
 while number_verification:
     try:
         while read_char() != "A":
-            # call the readLine function for each row of the keypad
-        
-            trigger = readLine(L1, ["1","2","3","A"])
-            trigger = readLine(L2, ["4","5","6","B"])
-            trigger = readLine(L3, ["7","8","9","C"])
-            trigger = readLine(L4, ["*","0","#","D"])
             time.sleep(0.3)
 
-            print("trigger: "+ trigger)
-
-            if trigger.isdigit():
+            if read_char().isdigit():
                 charge = charge + trigger 
                 setText("Digite el monto\n >"+str(charge))
                 setRGB(0, 128, 15)
