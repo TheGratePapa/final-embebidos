@@ -1,6 +1,7 @@
 from keypad import *
 from grove_rgb_lcd import *
 from Read import *
+from buzzer import *
 
 setText("Presione D para inicializar")
 setRGB(0, 128, 15)
@@ -86,6 +87,7 @@ while number_verification:
     
     try:
         val = float(pin)
+        
     except value_error:
         setText("Error numerico")
         setRGB(200, 0, 0)
@@ -93,6 +95,6 @@ while number_verification:
 
 
 #Verificacion
-
+half_sec_beep()
 setText("Verificacion")
 setRGB(255, 255, 255)
