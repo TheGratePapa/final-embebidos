@@ -4,6 +4,7 @@ import sqlite3
 cards = [
     {"card_id": 0xAABBCCDD, "code": "1470", "balance": 500_20},  # $500.20 = 50020
     {"card_id": 0xDDCCBBAA, "code": "0963", "balance": 15_30},   # $15.30 = 1530
+    {"card_id": 0xA34B661A, "code": "1234", "balance": 420_69}   # $429.69 = 1234
 ]
 
 con = sqlite3.connect("accounts.db")
