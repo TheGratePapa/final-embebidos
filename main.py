@@ -12,7 +12,7 @@ decimal_flag = 0
 
 try:
     while read_char() !="D":
-        pass 
+        time.sleep(0.1)
 except KeyboardInterrupt:
     print("\nApplication stopped!")
 
@@ -23,6 +23,7 @@ number_verification = True
 while number_verification:
     try:
         trigger = read_char()
+        time.sleep(0.1)
         while trigger != "A":
             print(charge)
             if trigger.isdigit():
