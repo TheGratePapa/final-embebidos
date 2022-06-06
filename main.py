@@ -6,6 +6,11 @@ from transaction import *
 import os
 import sys
 
+def cancel_verification(var):
+    if var == "B":
+        sys.stdout.flush()
+        os.execv(sys.argv[0], sys.argv)
+
 while True:
     setText("Presione D para inicializar")
     setRGB(0, 128, 15)
@@ -16,7 +21,7 @@ while True:
     charge = ""
     pin = ""
     decimal_flag = 0
-    cancel = false
+    
 
     #salir de modo standby
     try:
@@ -121,7 +126,3 @@ while True:
             pin_verification = False
             time.sleep(2)
             
-def cancel_verification(var):
-    if var == "B":
-        sys.stdout.flush()
-        os.execv(sys.argv[0], sys.argv)
