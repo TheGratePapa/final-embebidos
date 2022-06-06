@@ -27,8 +27,7 @@ while True:
     charge = ""
     pin = ""
     decimal_flag = 0
-   
-    
+    check = True
 
     #salir de modo standby
     try:
@@ -104,11 +103,12 @@ while True:
                         pin = pin + trigger 
                         setText("Digite el pin\n >"+str(pin))
                         setRGB(0, 128, 15)
+                        n+=1
                     elif trigger.isdigit() and check:
                         pin = pin + trigger 
                         setText("Digite el pin\n >"+ len(pin)*"*")
                         setRGB(0, 128, 15)
-                    n+=1
+                        n+=1
             except KeyboardInterrupt:
                 print("\nApplication stopped!")
             
