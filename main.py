@@ -67,9 +67,10 @@ print("tarjeta leida: "+ str(card))
 setText("Digite PIN\n >")
 setRGB(0, 128, 15)
 
-number_verification = True
+
 pin_verification = True
 while pin_verification:
+    number_verification = True
     while number_verification:
         try:
             n=0
