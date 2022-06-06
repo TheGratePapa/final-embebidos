@@ -3,6 +3,8 @@ from grove_rgb_lcd import *
 from Read import *
 #from buzzer import *
 from transaction import *
+import os
+import sys
 
 while True:
     setText("Presione D para inicializar")
@@ -14,6 +16,7 @@ while True:
     charge = ""
     pin = ""
     decimal_flag = 0
+    cancel = false
 
     #salir de modo standby
     try:
@@ -44,7 +47,8 @@ while True:
                     decimal_flag = 1
                     setText("Digite el monto\n >"+str(charge))
                     setRGB(0, 128, 15)
-
+                cancel_verification(trigger)
+                
         except KeyboardInterrupt:
             print("\nApplication stopped!")
         
@@ -117,3 +121,7 @@ while True:
             pin_verification = False
             time.sleep(2)
             
+def cancel_verification(var):
+    if var == "B":
+        sys.stdout.flush()
+        os.execv(sys.argv[0], sys.argv)
