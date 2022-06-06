@@ -2,7 +2,7 @@ from keypad import *
 from grove_rgb_lcd import *
 from Read import *
 #from buzzer import *
-#from transaction import *
+from transaction import *
 
 setText("Presione D para inicializar")
 setRGB(0, 128, 15)
@@ -50,7 +50,7 @@ while number_verification:
     number_verification = False
     
     try:
-        val = float(charge)
+        charge = int(float(charge)*100)
     except value_error:
         setText("Error numerico")
         setRGB(200, 0, 0)
@@ -87,7 +87,7 @@ while number_verification:
     number_verification = False
     
     try:
-        val = float(pin)
+        val = int(pin)
         
     except value_error:
         setText("Error numerico")
@@ -97,3 +97,13 @@ while number_verification:
 
 #Verificacion
 
+setText("Verificacion")
+setRGB(255, 255, 255)
+if verification_check((card[0],card[1],card[2],card[3]), pin, charge)!= True:
+    print("Error en la transaccion")
+    setText("Error en la \ntransaccion")
+    setRGB(255, 30, 30)
+else:
+    print("Transaccion exitosa")
+    setText("Transaccion exitosa")
+    setRGB(30, 255, 255)
