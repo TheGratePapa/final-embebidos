@@ -10,6 +10,13 @@ def cancel_verification(var):
     if var == "B":
         os.execl(sys.executable, sys.executable, *sys.argv)
 
+def visible_password(var):
+    if var == "C"
+        if check:
+            check = False
+        else
+            check = True
+
 while True:
     setText("Presione D para inicializar")
     setRGB(0, 128, 15)
@@ -20,6 +27,7 @@ while True:
     charge = ""
     pin = ""
     decimal_flag = 0
+    check = True
     
 
     #salir de modo standby
@@ -76,7 +84,7 @@ while True:
     setText("Digite PIN\n >")
     setRGB(0, 128, 15)
 
-
+    
     pin_verification = True
     while pin_verification:
         number_verification = True
@@ -85,14 +93,20 @@ while True:
                 n=0
                 pin = ""
                 while n<4:
+
                     trigger = read_char()
                     cancel_verification(trigger)
+                    visible_password(trigger)
                     time.sleep(0.2)
                     print("pin: " + pin)
                     print("trigger: "+ trigger)
-                    if trigger.isdigit():
+                    if trigger.isdigit() and check != True:
                         pin = pin + trigger 
                         setText("Digite el pin\n >"+str(pin))
+                        setRGB(0, 128, 15)
+                    elif trigger.isdigit() and check:
+                         pin = pin + trigger 
+                        setText("Digite el pin\n >"+ len(pin)*"*")
                         setRGB(0, 128, 15)
                     n+=1
             except KeyboardInterrupt:
