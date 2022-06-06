@@ -101,14 +101,15 @@ while True:
                     print("trigger: "+ trigger)
                     if trigger.isdigit() and check != True:
                         pin = pin + trigger 
+                        n+=1
+
+                    if check:
+                        setText("Digite el pin\n >"+len(pin)*"*")
+                        setRGB(0, 128, 15)
+                    else:
                         setText("Digite el pin\n >"+str(pin))
                         setRGB(0, 128, 15)
-                        n+=1
-                    elif trigger.isdigit() and check:
-                        pin = pin + trigger 
-                        setText("Digite el pin\n >"+ len(pin)*"*")
-                        setRGB(0, 128, 15)
-                        n+=1
+                    
             except KeyboardInterrupt:
                 print("\nApplication stopped!")
             
