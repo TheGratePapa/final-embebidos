@@ -11,10 +11,10 @@ def cancel_verification(var):
         os.execl(sys.executable, sys.executable, *sys.argv)
 
 def visible_password(var):
-    if var == "C"
+    if var == "C":
         if check:
             check = False
-        else
+        else:
             check = True
 
 while True:
