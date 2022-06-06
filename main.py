@@ -27,10 +27,10 @@ while True:
     setRGB(0, 128, 15)
 
     number_verification = True
-    while number_verification or read_char()!= "B":
+    while number_verification:
         try:
         
-            while trigger != "A" or read_char()!= "B":
+            while trigger != "A":
                 trigger = read_char()
                 time.sleep(0.2)
                 print("charge: " + charge)
@@ -70,13 +70,13 @@ while True:
 
 
     pin_verification = True
-    while pin_verification or read_char()!= "B":
+    while pin_verification:
         number_verification = True
-        while number_verification or read_char()!= "B":
+        while number_verification:
             try:
                 n=0
                 pin = ""
-                while n<4 or read_char()!= "B":
+                while n<4:
                     trigger = read_char()
                     time.sleep(0.2)
                     print("pin: " + pin)

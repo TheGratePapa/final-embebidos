@@ -37,7 +37,7 @@ def verification_check(uid,code,price):
         return False
 
     # Insertar nuevo valor
-    new_balance = balance - price*100
+    new_balance = balance - price
     print("new balance " + str(new_balance))
     cur.execute("UPDATE accounts SET balance=? WHERE card_id=?", (new_balance, int.from_bytes(uid, "big")))
     con.commit()
