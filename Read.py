@@ -2,8 +2,7 @@ import time
 import RPi.GPIO as GPIO
 import mfrc522
  
-# Create an object of the class MFRC522
-MIFAREReader = mfrc522.MFRC522()
+
  
 # Welcome message
 #print("Looking for cards")
@@ -12,7 +11,8 @@ MIFAREReader = mfrc522.MFRC522()
 # This loop checks for chips. If one is near it will get the UID
 
 def card_reader():
-
+  # Create an object of the class MFRC522
+  MIFAREReader = mfrc522.MFRC522()
   try:
     
     while True:
