@@ -50,7 +50,7 @@ while number_verification:
     number_verification = False
     
     try:
-        charge = float(charge)
+        charge = int(float(charge)*100)
     except value_error:
         setText("Error numerico")
         setRGB(200, 0, 0)
@@ -87,7 +87,7 @@ while number_verification:
     number_verification = False
     
     try:
-        pin = float(pin)
+        pin = int(pin)
         
     except value_error:
         setText("Error numerico")
