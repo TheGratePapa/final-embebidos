@@ -106,7 +106,7 @@ while True:
                     if check:
                         setText("Digite el pin\n >"+len(pin)*"*")
                         setRGB(0, 128, 15)
-                    else:
+                    elif check != True:
                         setText("Digite el pin\n >"+str(pin))
                         setRGB(0, 128, 15)
                     
