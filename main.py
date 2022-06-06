@@ -100,14 +100,14 @@ while True:
                     time.sleep(0.2)
                     print("pin: " + pin)
                     print("trigger: "+ trigger)
-                    if trigger.isdigit() and check != True:
+                    if trigger.isdigit():
                         pin = pin + trigger 
                         n+=1
 
                     if check:
                         setText("Digite el pin\n >"+len(pin)*"*")
                         setRGB(0, 128, 15)
-                    elif check != True:
+                    elif check == False:
                         setText("Digite el pin\n >"+str(pin))
                         setRGB(0, 128, 15)
                     
