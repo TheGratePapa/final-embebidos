@@ -1,7 +1,7 @@
 from keypad import *
 from grove_rgb_lcd import *
 from Read import *
-#from buzzer import *
+from buzzer import *
 from transaction import *
 
 setText("Presione D para inicializar")
@@ -61,7 +61,7 @@ setText("coloque tarjeta")
 setRGB(50, 50, 255)
 card = card_reader()
 print("tarjeta leida: "+ str(card)) 
-#half_sec_beep()
+half_sec_beep()
 #password
 
 setText("Digite PIN\n >")
