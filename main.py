@@ -9,13 +9,13 @@ import sys
 def cancel_verification(var):
     if var == "B":
         os.execl(sys.executable, sys.executable, *sys.argv)
-check = True
+
 def visible_password(var, varR ):
     if var == "C":
         if varR:
-            varR = False
+            return False
         else:
-            varR = True
+            return True
 
 while True:
     setText("Presione D para inicializar")
