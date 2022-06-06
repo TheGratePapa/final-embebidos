@@ -101,3 +101,9 @@ setText("Verificacion")
 setRGB(255, 255, 255)
 if verification_check((card[0],card[1],card[2],card[3]), pin, charge)!= True:
     print("Error en la transaccion")
+    setText("Error en la \ntransaccion")
+                setRGB(255, 30, 30)
+else:
+    print("Transaccion exitosa")
+    setText("Transaccion exitosa")
+                setRGB(30, 255, 255)
