@@ -16,6 +16,7 @@ def visible_password(var, varR ):
             return False
         else:
             return True
+    return varR
 
 while True:
     setText("Presione D para inicializar")
