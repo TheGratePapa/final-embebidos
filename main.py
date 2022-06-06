@@ -2,7 +2,7 @@ from keypad import *
 from grove_rgb_lcd import *
 from Read import *
 #from buzzer import *
-from transaction import *
+#from transaction import *
 
 setText("Presione D para inicializar")
 setRGB(0, 128, 15)
@@ -96,3 +96,4 @@ while number_verification:
 
 
 #Verificacion
+
