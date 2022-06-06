@@ -7,7 +7,7 @@ e_code = "1470" # codigo ingresado
 price = 20000 # precio de transaccion ($200)
 
 def verification_check(uid,code,price):
-    uid_filtered = (int.from_bytes(uid, "big"))
+    uid_filtered = (int.from_bytes(uid, "big"),)
     print("uid_filtedes: "+ str(uid_filtered))
     # Abrir conexion al inicio
     con = sqlite3.connect("accounts.db")
