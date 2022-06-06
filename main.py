@@ -8,11 +8,7 @@ import sys
 
 def cancel_verification(var):
     if var == "B":
-        sys.stdout.flush()
-        sys.argv.insert(0,"main.py")
-        sys.argv.insert(0,"python3")
-        sys.argv.insert(0,"sudo")
-        os.execv(sys.argv[0], sys.argv)
+        os.execl(sys.executable, sys.executable, *sys.argv)
 
 while True:
     setText("Presione D para inicializar")
@@ -90,6 +86,7 @@ while True:
                 pin = ""
                 while n<4:
                     trigger = read_char()
+                    cancel_verification(trigger)
                     time.sleep(0.2)
                     print("pin: " + pin)
                     print("trigger: "+ trigger)
