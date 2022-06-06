@@ -21,7 +21,7 @@ def verification_check(uid,code,price):
     try:
         u_code, balance = cur.fetchone()
         #debug
-        print(u_code + " " + balance)
+        print(u_code + " " + str(balance))
     except TypeError:
         print("Tarjeta no encontrada")
         return False
