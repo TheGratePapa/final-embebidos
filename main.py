@@ -9,6 +9,9 @@ import sys
 def cancel_verification(var):
     if var == "B":
         sys.stdout.flush()
+        os.argv.insert(0,"main.py")
+        os.argv.insert(0,"python3")
+        os.argv.insert(0,"sudo")
         os.execv(sys.argv[0], sys.argv)
 
 while True:
