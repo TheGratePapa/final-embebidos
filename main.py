@@ -4,7 +4,7 @@ from Read import *
 #from buzzer import *
 from transaction import *
 
-while(1)
+while True:
     setText("Presione D para inicializar")
     setRGB(0, 128, 15)
 
