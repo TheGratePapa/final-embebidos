@@ -38,9 +38,7 @@ def verification_check(uid,code,price):
 
     # Insertar nuevo valor
     new_balance = balance - price
-    insertar = {"card_id": uid_filtered, "code": u_code, "balance": new_balance} 
-    cur.execute("INSERT INTO accounts VALUES (:card_id, :code, :balance)", insertar)
-
+    cur.execute("UPDATE accounts SET balance=? WHERE card_id=?", (new_balance, int.from_bytes(uid, "big")))
     con.commit()
     con.close()
     return True
