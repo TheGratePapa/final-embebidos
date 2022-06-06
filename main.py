@@ -74,6 +74,7 @@ while pin_verification:
     while number_verification:
         try:
             n=0
+            pin = ""
             while n<4:
                 trigger = read_char()
                 time.sleep(0.2)
