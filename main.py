@@ -99,5 +99,5 @@ while number_verification:
 
 setText("Verificacion")
 setRGB(255, 255, 255)
-if !verification_check((card[0],card[1],card[2],card[3]), pin, charge):
+if verification_check((card[0],card[1],card[2],card[3]), pin, charge)!= True:
     print("Error en la transaccion")
