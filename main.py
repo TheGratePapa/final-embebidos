@@ -112,3 +112,4 @@ while pin_verification:
         setText("Transaccion exitosa")
         setRGB(30, 255, 255)
         pin_verification = False
+        number_verification = True
