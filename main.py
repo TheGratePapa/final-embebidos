@@ -87,7 +87,7 @@ while number_verification:
     number_verification = False
     
     try:
-        val = int(pin)
+        val = float(pin)
         
     except value_error:
         setText("Error numerico")
