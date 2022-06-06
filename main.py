@@ -106,8 +106,9 @@ while pin_verification:
         print("Error en la transaccion")
         setText("Error en la \ntransaccion")
         setRGB(255, 30, 30)
-        number_verification = True
         time.sleep(2)
+        setText("Digite PIN\n >")
+        setRGB(0, 128, 15)
     else:
         print("Transaccion exitosa")
         setText("Transaccion exitosa")
