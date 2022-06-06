@@ -68,42 +68,44 @@ setText("Digite PIN\n >")
 setRGB(0, 128, 15)
 
 number_verification = True
-while number_verification:
-    try:
-        n=0
-        while n<4:
-            trigger = read_char()
-            time.sleep(0.2)
-            print("pin: " + pin)
-            print("trigger: "+ trigger)
-            if trigger.isdigit():
-                pin = pin + trigger 
-                setText("Digite el pin\n >"+str(pin))
-                setRGB(0, 128, 15)
-            n+=1
-    except KeyboardInterrupt:
-        print("\nApplication stopped!")
-    
-    number_verification = False
-    
-    try:
-        val = int(pin)
+pin_verification = True
+while pin_verification:
+    while number_verification:
+        try:
+            n=0
+            while n<4:
+                trigger = read_char()
+                time.sleep(0.2)
+                print("pin: " + pin)
+                print("trigger: "+ trigger)
+                if trigger.isdigit():
+                    pin = pin + trigger 
+                    setText("Digite el pin\n >"+str(pin))
+                    setRGB(0, 128, 15)
+                n+=1
+        except KeyboardInterrupt:
+            print("\nApplication stopped!")
         
-    except value_error:
-        setText("Error numerico")
-        setRGB(200, 0, 0)
-        number_verification = True
+        number_verification = False
+        
+        try:
+            val = int(pin)
+            
+        except value_error:
+            setText("Error numerico")
+            setRGB(200, 0, 0)
+            number_verification = True
 
+    #Verificacion
 
-#Verificacion
-
-setText("Verificacion")
-setRGB(255, 255, 255)
-if verification_check((card[0],card[1],card[2],card[3]), pin, charge)!= True:
-    print("Error en la transaccion")
-    setText("Error en la \ntransaccion")
-    setRGB(255, 30, 30)
-else:
-    print("Transaccion exitosa")
-    setText("Transaccion exitosa")
-    setRGB(30, 255, 255)
+    setText("Verificacion")
+    setRGB(255, 255, 255)
+    if verification_check((card[0],card[1],card[2],card[3]), pin, charge)!= True:
+        print("Error en la transaccion")
+        setText("Error en la \ntransaccion")
+        setRGB(255, 30, 30)
+        pin_verification = False
+    else:
+        print("Transaccion exitosa")
+        setText("Transaccion exitosa")
+        setRGB(30, 255, 255)
