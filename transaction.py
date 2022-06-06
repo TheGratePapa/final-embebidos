@@ -1,10 +1,10 @@
 import sqlite3
 
 # Valores de prueba
-uid = (0xAA, 0xBB, 0xCC, 0xDD) # tarjeta leida
-uid_filtered = (int.from_bytes(uid, "big"),)
-e_code = "1470" # codigo ingresado
-price = 20000 # precio de transaccion ($200)
+#uid = (0xAA, 0xBB, 0xCC, 0xDD) # tarjeta leida
+#uid_filtered = (int.from_bytes(uid, "big"),)
+#e_code = "1470" # codigo ingresado
+#price = 20000 # precio de transaccion ($200)
 
 def verification_check(uid,code,price):
     uid_filtered = (int.from_bytes(uid, "big"),)
@@ -27,7 +27,7 @@ def verification_check(uid,code,price):
         return False
 
     # Comparar codigo
-    if e_code != u_code:
+    if code != u_code:
         print("Codigo incorrecto")
         return False
 
